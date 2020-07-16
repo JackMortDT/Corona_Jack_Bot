@@ -23,39 +23,23 @@ class CoronaServiceImpl implements CoronaService{
   @Value('${x.rapidapi.host}')
   String host
 
-  CountriesResponse availableCountries
-
   @Override
   @PostConstruct
   CountriesResponse getAllCountries(){
-    if(availableCountries == null) {
       RestTemplate restTemplate = new RestTemplate()
       String url = "${host}/countries"
       HttpEntity<String> entity = new HttpEntity<String>("parameters", getHeaders())
       ResponseEntity<CountriesResponse> response = restTemplate.exchange(url, HttpMethod.GET, entity, CountriesResponse)
-      availableCountries=response.body
-    } else {
-      availableCountries
-    }
-    availableCountries
+      response.body
   }
 
   @Override
-  void getStatisticsForCountry(String countryName) {
-    String validatedCountry = getAllCountries().response.find(){ countryBank ->
-      countryBank == countryName
-    }
-    if(validatedCountry) {
-      println(validatedCountry + " Country selected")
-      RestTemplate restTemplate = new RestTemplate()
-      String url = "${host}/statistics?country={country}"
-      HttpEntity<String> entity = new HttpEntity<String>("parameters", getHeaders())
-      ResponseEntity<StatisticsResponse> response = restTemplate.exchange(url, HttpMethod.GET, entity, StatisticsResponse, validatedCountry)
-      println "******"*20
-      println(response.statusCode)
-      println(response.body)
-      println "******"*20
-    }
+  StatisticsResponse getStatisticsForCountry(String countryName) {
+    RestTemplate restTemplate = new RestTemplate()
+    String url = "${host}/statistics?country={country}"
+    HttpEntity<String> entity = new HttpEntity<String>("parameters", getHeaders())
+    ResponseEntity<StatisticsResponse> response = restTemplate.exchange(url, HttpMethod.GET, entity, StatisticsResponse, countryName)
+    response.body
   }
 
   @Override
