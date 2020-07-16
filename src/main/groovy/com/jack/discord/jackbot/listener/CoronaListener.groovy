@@ -43,7 +43,7 @@ class CoronaListener extends ListenerAdapter{
         event.channel.sendMessageFormat("${stats.countriesList[0].toString()} \n").queue()
       } else {
         event.channel.sendMessage("Country did not match with availables countries, try one of these").queue()
-        event.channel.sendMessageFormat("${countriesList.toString()}...").queue()
+        event.channel.sendMessageFormat("${countriesList.response.join(', ').take(1000)}...").queue()
       }
     } else {
       event.channel.sendMessage("Country did not match with availables countries, try one of these").queue()
