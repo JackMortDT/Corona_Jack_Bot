@@ -20,6 +20,8 @@ class CoronaServiceImpl implements CoronaService{
 
   @Value('${x.rapidapi.key}')
   String apiKey
+  @Value('${x.rapidapi.host}')
+  String host
 
   CountriesResponse availableCountries
 
@@ -28,7 +30,7 @@ class CoronaServiceImpl implements CoronaService{
   CountriesResponse getAllCountries(){
     if(availableCountries == null) {
       RestTemplate restTemplate = new RestTemplate()
-      String url = "https://covid-193.p.rapidapi.com/countries"
+      String url = "${host}/countries"
       HttpEntity<String> entity = new HttpEntity<String>("parameters", getHeaders())
       ResponseEntity<CountriesResponse> response = restTemplate.exchange(url, HttpMethod.GET, entity, CountriesResponse)
       availableCountries=response.body
@@ -46,7 +48,7 @@ class CoronaServiceImpl implements CoronaService{
     if(validatedCountry) {
       println(validatedCountry + " Country selected")
       RestTemplate restTemplate = new RestTemplate()
-      String url = "https://covid-193.p.rapidapi.com/statistics?country={country}"
+      String url = "${host}/statistics?country={country}"
       HttpEntity<String> entity = new HttpEntity<String>("parameters", getHeaders())
       ResponseEntity<StatisticsResponse> response = restTemplate.exchange(url, HttpMethod.GET, entity, StatisticsResponse, validatedCountry)
       println "******"*20
