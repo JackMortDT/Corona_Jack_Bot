@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 @SpringBootApplication
 class JackbotApplication {
 
-	static void main(String[] args) {
-		SpringApplication.run(JackbotApplication, args)
-	}
+  static void main(String[] args) {
+    SpringApplication.run(JackbotApplication, args)
+  }
 
 }
