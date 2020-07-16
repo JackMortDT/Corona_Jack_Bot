@@ -8,4 +8,9 @@ class CountriesResponse {
   Integer results
   List<String> response
 
+  @Override
+  String toString() {
+    "${response.join(", ")}".take(1000)
+  }
+
 }
