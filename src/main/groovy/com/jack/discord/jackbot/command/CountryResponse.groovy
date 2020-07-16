@@ -1,8 +1,5 @@
 package com.jack.discord.jackbot.command
 
-import groovy.transform.ToString
-
-@ToString
 class CountryResponse {
 
   String country
@@ -10,5 +7,16 @@ class CountryResponse {
   Deaths deaths
   String day
   String time
+
+  @Override
+  String toString() {
+    """CountryResponse: {
+      Country: ${country},
+      ${cases},
+      ${deaths},
+      Day: ${day},
+      Time: ${time}
+    }"""
+  }
 
 }
