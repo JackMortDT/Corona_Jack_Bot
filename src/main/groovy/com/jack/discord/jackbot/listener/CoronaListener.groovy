@@ -27,6 +27,8 @@ class CoronaListener extends ListenerAdapter{
   }
 
   static void help(MessageReceivedEvent event) {
+    println event.author
+    println event.author
     event.channel.sendMessage("!Hi type **!statistics** CountryName for information by country").queue()
   }
 
