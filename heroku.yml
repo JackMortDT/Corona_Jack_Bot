@@ -1,5 +1,0 @@
-run:
-  bot: gradle clean build
-build:
-  docker:
-    bot: Dockerfile
