@@ -1,3 +1,8 @@
+FROM gradle:4.7.0-jdk8-alpine AS build
+WORKDIR /root/
+COPY --chown=gradle:gradle . src
+RUN gradle build
+
 FROM openjdk
 WORKDIR /root/
 ADD build/libs/jackbot-0.0.1.jar jackbot.jar
