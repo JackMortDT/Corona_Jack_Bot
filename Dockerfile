@@ -1,6 +1,7 @@
 FROM gradle:4.7.0-jdk8-alpine AS build
-COPY --chown=gradle:gradle . src
-WORKDIR /root/
+COPY --chown=gradle:gradle . /jackbot/src
+ADD --chown=gradle . /jackbot
+WORKDIR /jackbot
 RUN gradle build
 
 FROM openjdk
