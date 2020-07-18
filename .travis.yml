@@ -1,9 +1,7 @@
 language: groovy
 dist: trusty
 
-os:
-  - linux
-  - osx
+os: linux
 
 jdk:
   - openjdk8
@@ -11,4 +9,3 @@ jdk:
 
 script:
   - gradle check
-  - gradle build
