@@ -1,7 +1,13 @@
 language: groovy
 dist: trusty
 
-jdk: oraclejdk8
+os:
+  - linux
+  - osx
+
+jdk:
+  - openjdk8
+  - openjdk9
 
 script:
   - gradle check
