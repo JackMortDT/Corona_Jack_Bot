@@ -1,4 +1,4 @@
-package com.jack.discord.jackbot
+package com.jack.jackbot
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
