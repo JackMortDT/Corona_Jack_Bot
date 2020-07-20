@@ -1,8 +1,8 @@
-package com.jack.discord.jackbot.component
+package com.jack.jackbot.component
 
-import com.jack.discord.jackbot.command.CountriesResponse
-import com.jack.discord.jackbot.command.StatisticsResponse
-import com.jack.discord.jackbot.service.CoronaService
+import com.jack.jackbot.command.CountriesResponse
+import com.jack.jackbot.command.StatisticsResponse
+import com.jack.jackbot.service.CoronaService
 import me.ramswaroop.jbot.core.slack.Bot
 import me.ramswaroop.jbot.core.slack.Controller
 import me.ramswaroop.jbot.core.slack.EventType

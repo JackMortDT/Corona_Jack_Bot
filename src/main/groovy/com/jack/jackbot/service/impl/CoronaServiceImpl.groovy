@@ -1,8 +1,8 @@
-package com.jack.discord.jackbot.service.impl
+package com.jack.jackbot.service.impl
 
-import com.jack.discord.jackbot.command.CountriesResponse
-import com.jack.discord.jackbot.command.StatisticsResponse
-import com.jack.discord.jackbot.service.CoronaService
+import com.jack.jackbot.command.CountriesResponse
+import com.jack.jackbot.command.StatisticsResponse
+import com.jack.jackbot.service.CoronaService
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.HttpEntity
 import org.springframework.http.HttpHeaders

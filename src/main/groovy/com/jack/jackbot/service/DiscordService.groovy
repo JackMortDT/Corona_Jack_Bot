@@ -1,4 +1,4 @@
-package com.jack.discord.jackbot.service
+package com.jack.jackbot.service
 
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent
 

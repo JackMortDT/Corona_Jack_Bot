@@ -1,6 +1,6 @@
-package com.jack.discord.jackbot.component
+package com.jack.jackbot.component
 
-import com.jack.discord.jackbot.listener.CoronaListener
+import com.jack.jackbot.listener.CoronaListener
 import net.dv8tion.jda.api.JDA
 import net.dv8tion.jda.api.JDABuilder
 import org.springframework.beans.factory.annotation.Autowired

@@ -1,9 +1,9 @@
-package com.jack.discord.jackbot.service.impl
+package com.jack.jackbot.service.impl
 
-import com.jack.discord.jackbot.command.CountriesResponse
-import com.jack.discord.jackbot.command.StatisticsResponse
-import com.jack.discord.jackbot.service.CoronaService
-import com.jack.discord.jackbot.service.DiscordService
+import com.jack.jackbot.command.CountriesResponse
+import com.jack.jackbot.command.StatisticsResponse
+import com.jack.jackbot.service.CoronaService
+import com.jack.jackbot.service.DiscordService
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service

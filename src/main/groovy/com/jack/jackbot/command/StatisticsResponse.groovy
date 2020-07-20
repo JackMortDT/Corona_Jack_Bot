@@ -1,4 +1,4 @@
-package com.jack.discord.jackbot.command
+package com.jack.jackbot.command
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonProperty
