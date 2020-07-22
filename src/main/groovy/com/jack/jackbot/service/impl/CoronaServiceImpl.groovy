@@ -24,7 +24,6 @@ class CoronaServiceImpl implements CoronaService{
   String host
 
   @Override
-  @PostConstruct
   CountriesResponse getAllCountries(){
       RestTemplate restTemplate = new RestTemplate()
       String url = "${host}/countries"
