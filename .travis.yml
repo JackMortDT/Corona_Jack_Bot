@@ -1,8 +1,5 @@
 language: java
 jdk:
   - oraclejdk8
-deploy:
-  provider: heroku
-  api-key:
-    secure: $HEROKU_API_KEY
-  app: jackmortbot
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
