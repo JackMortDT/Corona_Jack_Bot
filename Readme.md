@@ -5,7 +5,7 @@ Multiplatform bot (Slack, Discord), made using Spring Boot, Written for fun.
 ## Services
 | Type                          | Badges                    |
 |-------------------------------|---------------------------|
-| **Continuous Integration: **  | [![travis-icon]][travis]  |
+| **Continuous Integration:**  | [![travis-icon]][travis]  |
 
 
 ## Configuration
